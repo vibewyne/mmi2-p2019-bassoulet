@@ -1,5 +1,5 @@
 {
-  "name": "sass",
+  "name": "mmi2-p2019-bassoulet",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,10 +8,14 @@
     "build": "parcel build src/index.html"
   },
   "keywords": [],
-  "author": "",
+  "author": "vibewyne <bassouletmarion@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.10.0",
-    "parcel-bundler": "^1.10.3"
+    "autoprefixer": "^9.4.10",
+    "node-sass": "^4.11.0",
+    "parcel-bundler": "^1.12.0",
+    "parcel-plugin-purifycss": "^1.0.5",
+    "postcss-modules": "^1.4.1",
+    "waypoints": "^4.0.1"
   }
 }

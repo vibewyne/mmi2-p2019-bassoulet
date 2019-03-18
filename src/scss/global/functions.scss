@@ -1,0 +1,38 @@
+/**
+*
+* Framework : fonctions SASS
+*
+** Px to em
+*
+**/
+
+/*=================================
+=            Px to em            =
+=================================*/
+
+@function em($a, $b:null, $c:null, $d:null, $base: $base-font-size) {
+
+	// $a
+	@if $a != null and $b == null and $c == null and $d == null {
+
+		@return #{$a/$base}em;
+
+	// $a et $b
+	} @else if $a != null and $b != null and $c == null and $d == null {
+
+		@return #{$a/$base}em #{$b/$base}em;
+
+	// $a, $b, $c et $d
+	} @else if $a != null and $b != null and $c != null and $d != null {
+
+		@return #{$a/$base}em #{$b/$base}em #{$c/$base}em #{$d/$base}em;
+
+	} @else {
+
+		@return "!";
+
+	}
+
+}
+
+/*=====  FIN Px to em  ======*/

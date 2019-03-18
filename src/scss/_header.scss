@@ -1,0 +1,96 @@
+header {
+	height:210px;
+	padding: 3em 2em 7em 2em;
+	background-color: #2e3141;
+	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+	clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
+	
+	@media #{$tablet_more}{
+		padding: 12em 10em 18em 10em;
+	}
+
+	@media #{$desktop}{
+		padding: 12em 20em 18em 20em;
+	}
+
+}
+
+.header__icon{
+	border-radius: 100%;
+	border: solid 2px rgba(255, 255, 255, 0.125);
+	display: inline-block;
+	font-size: 1.8em;
+	height: 1.7em;
+	line-height:1.75em;
+	text-align: center;
+	width: 1.7em;
+	color:white;
+
+	transition: opacity 2s ease, transform 1s ease;
+	transform: translateY(0);
+	opacity: 1;
+
+	object{
+		margin-top:10px;
+		margin-left:2px;
+		width:27px;
+		height:auto;
+
+		@media #{$tablet_more}{
+		margin-top:14px;
+		margin-left:2px;
+		width:45px;
+		height:auto;
+		}
+	}
+
+	@media #{$tablet_more}{
+		font-size: 2.3em;
+		height: 2em;
+		width: 2em;
+		line-height:2em;
+	}
+}
+
+.header__title{
+	transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
+	transform: translateX(0);
+	transition-delay: 0.65s;
+	filter: blur(0);
+	opacity: 1;
+
+	font-size:1.5em;
+	opacity:1;
+	font-weight:bolder;
+	margin-top:30px;
+	font-family:$font;
+	border-bottom: solid 2px rgba(255, 255, 255, 0.125);
+	margin-bottom: 0.8em;
+	padding-bottom: 0.4em;
+
+	@media #{$tablet_more}{
+		font-size:2.5em;
+	}
+}
+
+
+.header__desc{
+	transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
+	transform: translateX(0);
+	transition-delay: 0.65s;
+	filter: blur(0);
+	opacity: 0.8;
+
+	font-size:0.8em;
+	font-weight: 100;
+	font-family:$font;
+	letter-spacing: 0.1em;
+	line-height: 2;
+	margin: 0 0 1em 0;
+	text-transform: uppercase;
+	color:white;
+
+	@media #{$tablet_more}{
+		font-size:1em;
+	}
+}
