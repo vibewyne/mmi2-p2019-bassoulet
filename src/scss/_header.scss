@@ -1,7 +1,7 @@
 header {
 	height:210px;
 	padding: 3em 2em 7em 2em;
-	background-color: #2e3141;
+	background-color: $bg-main;
 	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
 	clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
 	
@@ -60,9 +60,10 @@ header {
 	opacity: 1;
 
 	font-size:1.5em;
-	opacity:1;
+	text-transform:uppercase;
 	font-weight:bolder;
 	margin-top:30px;
+	color: #ffffff;
 	font-family:$font;
 	border-bottom: solid 2px rgba(255, 255, 255, 0.125);
 	margin-bottom: 0.8em;
@@ -88,7 +89,7 @@ header {
 	line-height: 2;
 	margin: 0 0 1em 0;
 	text-transform: uppercase;
-	color:white;
+	color:$white-font;
 
 	@media #{$tablet_more}{
 		font-size:1em;

@@ -9,18 +9,20 @@
   transition: opacity 500ms;
   visibility: hidden;
   opacity: 0;
+
+  &:target {
+    visibility: visible;
+    opacity: 1;
+  }
 }
-.overlay:target {
-  visibility: visible;
-  opacity: 1;
-}
+
 
 .popup {
   font-family: $font;
   text-align: left;
   margin: 50px auto;
   padding: 20px;
-  background:  #2e3141;
+  background:  $bg-main;
   border-radius: 5px;
   width: 70%;
   height:70vh;
@@ -30,14 +32,15 @@
   @media #{$desktop}{
     width:60%;
   }
+
+  h2 {
+    margin-top: 20px;
+    margin-left:20px;
+    color: $white-font;
+  }
 }
 
-.popup h2 {
-  margin-top: 20px;
-  margin-left:20px;
-  color: white;
-}
-.popup .close {
+.popup__close {
   position: absolute;
   top: 35px;
   right: 35px;
@@ -47,8 +50,8 @@
   text-decoration: none;
   color: white;
 }
-.popup .content {
-  color:white;
+.popup__content {
+  color:$white-font;
   padding:50px 20px;
   text-align:justify;
   opacity:0.8;
