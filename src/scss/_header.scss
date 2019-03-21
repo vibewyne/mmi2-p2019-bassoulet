@@ -15,6 +15,13 @@ header {
 
 }
 
+@keyframes appear {
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
 .header__icon{
 	border-radius: 100%;
 	border: solid 2px rgba(255, 255, 255, 0.125);
@@ -26,9 +33,11 @@ header {
 	width: 1.7em;
 	color:white;
 
-	transition: opacity 2s ease, transform 1s ease;
-	transform: translateY(0);
-	opacity: 1;
+	@media #{$tablet_more}{
+			opacity: 0;
+			transform:translateX(50px);
+			animation: appear 1s ease 0.8s forwards;
+		}
 
 	object{
 		margin-top:10px;
@@ -37,10 +46,10 @@ header {
 		height:auto;
 
 		@media #{$tablet_more}{
-		margin-top:14px;
-		margin-left:2px;
-		width:45px;
-		height:auto;
+			margin-top:14px;
+			margin-left:2px;
+			width:45px;
+			height:auto;
 		}
 	}
 
@@ -53,12 +62,6 @@ header {
 }
 
 .header__title{
-	transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
-	transform: translateX(0);
-	transition-delay: 0.65s;
-	filter: blur(0);
-	opacity: 1;
-
 	font-size:1.5em;
 	text-transform:uppercase;
 	font-weight:bolder;
@@ -71,17 +74,15 @@ header {
 
 	@media #{$tablet_more}{
 		font-size:2.5em;
+		opacity: 0;
+		transform:translateX(50px);
+		animation: appear 1s ease 0.8s forwards;
+
 	}
 }
 
 
 .header__desc{
-	transition: opacity 0.5s ease, transform 0.5s ease, filter 0.25s ease;
-	transform: translateX(0);
-	transition-delay: 0.65s;
-	filter: blur(0);
-	opacity: 0.8;
-
 	font-size:0.8em;
 	font-weight: 100;
 	font-family:$font;
@@ -93,5 +94,9 @@ header {
 
 	@media #{$tablet_more}{
 		font-size:1em;
+		opacity: 0;
+		transform:translateX(50px);
+		animation: appear 1s ease 0.8s forwards;
+
 	}
 }

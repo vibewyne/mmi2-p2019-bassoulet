@@ -25,7 +25,6 @@
   background:  $bg-main;
   border-radius: 5px;
   width: 70%;
-  height:70vh;
   position: relative;
   transition: all 2s ease-in-out;
 
@@ -37,6 +36,8 @@
     margin-top: 20px;
     margin-left:20px;
     color: $white-font;
+    font-size:1.3rem;
+    font-weight:bold;
   }
 }
 
@@ -57,4 +58,32 @@
   opacity:0.8;
   overflow: auto;
   font-size:1.1em;
+}
+.popup__image{
+  display:none;
+  
+  @media #{$tablet}{
+    display:block;
+    width:160px;
+    margin:0 auto 30px auto;
+  }
+
+  @media #{$tablet_more}{
+    width:230px;
+  }
+
+  @media #{$desktop}{
+    width:300px;
+    float:left;
+    margin-right:30px
+  }
+
+}
+.popup__text{
+  font-size:1rem;
+  hyphens:auto;
+
+  @media #{$desktop}{
+    font-size:1.2rem;
+  }
 }
