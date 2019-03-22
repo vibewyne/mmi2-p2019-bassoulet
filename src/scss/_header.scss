@@ -1,6 +1,10 @@
 header {
 	height:210px;
 	padding: 3em 2em 7em 2em;
+	background-image:url('./../img/banner.png');
+	background-size: cover;
+	background-repeat:no-repeat;
+	background-position: top left;
 	background-color: $bg-main;
 	-webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
 	clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
